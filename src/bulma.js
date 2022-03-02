@@ -6,7 +6,7 @@ import { Navbar } from './plugins/navbar';
 // import { Message } from './plugins/message';
 // import { Dropdown } from './plugins/dropdown';
 // import { Modal } from './plugins/modal';
-// import { Alert } from './plugins/alert';
+import { Alert } from './plugins/alert';
 // import { File } from './plugins/file';
 // import { Tabs } from './plugins/tabs';
 // import { PanelTabs } from './plugins/panelTabs';
