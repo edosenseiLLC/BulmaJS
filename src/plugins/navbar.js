@@ -143,15 +143,18 @@ export class Navbar extends Plugin {
      * @return {undefined}
      */
     registerEvents() {
-        this.triggerElement.addEventListener('click', this.handleTriggerClick.bind(this));
+        // On pages with the slogan-only (no menu) navbar, this trigger is not available.
+        if (this.triggerElement) {
+            this.triggerElement.addEventListener('click', this.handleTriggerClick.bind(this));
 
-        if (this.sticky) {
-            this.enableSticky();
-        }
+            if (this.sticky) {
+                this.enableSticky();
+            }
 
-        Bulma.each(this.dropdowns, (dropdown) => {
-            dropdown.addEventListener('click', this.handleDropdownTrigger);
-        });
+            Bulma.each(this.dropdowns, (dropdown) => {
+                dropdown.addEventListener('click', this.handleDropdownTrigger);
+            });
+	}
     }
 
     /**
